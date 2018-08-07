@@ -9,11 +9,12 @@
 import UIKit
 
 public class PQProgressCirclrLayer: PQProgressBaseLayer {
+    var circleBackgrouncColor: UIColor = .gray
     var foregroundColor: UIColor = .white
     convenience init(backgroundColor: UIColor, foregroundColor: UIColor) {
         self.init()
         
-        self.backgroundColor = backgroundColor.cgColor
+        self.circleBackgrouncColor = backgroundColor
         self.foregroundColor = foregroundColor
     }
     
@@ -22,12 +23,12 @@ public class PQProgressCirclrLayer: PQProgressBaseLayer {
     }
     
     override public func drawUI() {
-        setLayer(storkColor: backgroundColor ?? UIColor.gray.cgColor, layer: self)
+        setLayer(storkColor: circleBackgrouncColor.cgColor, layer: self)
         setLayer(storkColor: foregroundColor.cgColor, layer: foregroundCircleLayer)
     }
     
     private func setLayer(storkColor: CGColor, layer: CAShapeLayer) {
-        let path = UIBezierPath(arcCenter: CGPoint(x: frame.width * 0.5, y: frame.height * 0.5), radius: frame.width * 0.5, startAngle: CGFloat(-Double.pi * 0.5), endAngle: CGFloat(Double.pi * 2) + CGFloat(-Double.pi * 0.5), clockwise: true)
+        let path = UIBezierPath(arcCenter: CGPoint(x: frame.width * 0.5, y: frame.height * 0.5), radius: frame.width * 0.49, startAngle: CGFloat(-Double.pi * 0.5), endAngle: CGFloat(Double.pi * 2) + CGFloat(-Double.pi * 0.5), clockwise: true)
         
         layer.fillColor = nil
         layer.lineWidth = 10

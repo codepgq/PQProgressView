@@ -11,7 +11,7 @@ import UIKit
 public class PQProgressView: UIView {
     public enum PQProgressAnimation {
         case flash
-        case circle(backgoundColor: UIColor, foregroundColor: UIColor)
+        case circle(backgoundColor: UIColor, foregroundColor: UIColor, font: UIFont)
         case wave(waveColor: UIColor)
     }
     
@@ -22,7 +22,7 @@ public class PQProgressView: UIView {
     }
     
     ///
-    public var animationType: PQProgressAnimation = .circle(backgoundColor: .gray, foregroundColor: .white)
+    public var animationType: PQProgressAnimation = .circle(backgoundColor: .gray, foregroundColor: .white, font: UIFont.systemFont(ofSize: 20))
     /// 进度显示
     public var textType: PQProgressText = .black
     /// 0.0 ~ 1.0
@@ -30,6 +30,7 @@ public class PQProgressView: UIView {
         didSet{
             animationLayer.update(progress: progress)
             textLabel.text = String(format: "%.0f%%", progress * 100)
+            
         }
     }
     
@@ -50,7 +51,8 @@ public class PQProgressView: UIView {
         switch animationType {
         case .flash:
             animationLayer = PQProgressFlashLayer()
-        case .circle(let backColor, let foreColor):
+        case .circle(let backColor, let foreColor, let font):
+            textLabel.font = font
             animationLayer = PQProgressCirclrLayer(backgroundColor: backColor, foregroundColor: foreColor)
         case .wave(let waveColor):
             animationLayer = PQProgressWaveLayer(color: waveColor)

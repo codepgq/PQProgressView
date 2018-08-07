@@ -13,7 +13,38 @@
 		60C41130211946CD0047F06E /* PQProgressFlashLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4112B211946CD0047F06E /* PQProgressFlashLayer.swift */; };
 		60C41131211946CD0047F06E /* PQProgressBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4112C211946CD0047F06E /* PQProgressBaseLayer.swift */; };
 		60C41132211946CD0047F06E /* PQProgressCirclrLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4112D211946CD0047F06E /* PQProgressCirclrLayer.swift */; };
+		60C4113E211949020047F06E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4113D211949020047F06E /* AppDelegate.swift */; };
+		60C41140211949020047F06E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4113F211949020047F06E /* ViewController.swift */; };
+		60C41143211949020047F06E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C41141211949020047F06E /* Main.storyboard */; };
+		60C41145211949030047F06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C41144211949030047F06E /* Assets.xcassets */; };
+		60C41148211949030047F06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C41146211949030047F06E /* LaunchScreen.storyboard */; };
+		60C4114D211949FD0047F06E /* PQProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4111E211946B70047F06E /* PQProgressView.framework */; };
+		60C4114E211949FD0047F06E /* PQProgressView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4111E211946B70047F06E /* PQProgressView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60C4114F211949FD0047F06E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60C41115211946B70047F06E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60C4111D211946B70047F06E;
+			remoteInfo = PQProgressView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		60C41151211949FD0047F06E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				60C4114E211949FD0047F06E /* PQProgressView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		60C4111E211946B70047F06E /* PQProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PQProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,13 @@
 		60C4112B211946CD0047F06E /* PQProgressFlashLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQProgressFlashLayer.swift; sourceTree = "<group>"; };
 		60C4112C211946CD0047F06E /* PQProgressBaseLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQProgressBaseLayer.swift; sourceTree = "<group>"; };
 		60C4112D211946CD0047F06E /* PQProgressCirclrLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQProgressCirclrLayer.swift; sourceTree = "<group>"; };
+		60C4113B211949020047F06E /* TestPQProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPQProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C4113D211949020047F06E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		60C4113F211949020047F06E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60C41142211949020047F06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		60C41144211949030047F06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60C41147211949030047F06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		60C41149211949030047F06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60C41138211949020047F06E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C4114D211949FD0047F06E /* PQProgressView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				60C41120211946B70047F06E /* PQProgressView */,
+				60C4113C211949020047F06E /* TestPQProgressView */,
 				60C4111F211946B70047F06E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				60C4111E211946B70047F06E /* PQProgressView.framework */,
+				60C4113B211949020047F06E /* TestPQProgressView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +113,19 @@
 				60C41122211946B70047F06E /* Info.plist */,
 			);
 			path = PQProgressView;
+			sourceTree = "<group>";
+		};
+		60C4113C211949020047F06E /* TestPQProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				60C4113D211949020047F06E /* AppDelegate.swift */,
+				60C4113F211949020047F06E /* ViewController.swift */,
+				60C41141211949020047F06E /* Main.storyboard */,
+				60C41144211949030047F06E /* Assets.xcassets */,
+				60C41146211949030047F06E /* LaunchScreen.storyboard */,
+				60C41149211949030047F06E /* Info.plist */,
+			);
+			path = TestPQProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,16 +160,39 @@
 			productReference = 60C4111E211946B70047F06E /* PQProgressView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		60C4113A211949020047F06E /* TestPQProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60C4114A211949030047F06E /* Build configuration list for PBXNativeTarget "TestPQProgressView" */;
+			buildPhases = (
+				60C41137211949020047F06E /* Sources */,
+				60C41138211949020047F06E /* Frameworks */,
+				60C41139211949020047F06E /* Resources */,
+				60C41151211949FD0047F06E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60C41150211949FD0047F06E /* PBXTargetDependency */,
+			);
+			name = TestPQProgressView;
+			productName = TestPQProgressView;
+			productReference = 60C4113B211949020047F06E /* TestPQProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		60C41115211946B70047F06E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = pgq;
 				TargetAttributes = {
 					60C4111D211946B70047F06E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					60C4113A211949020047F06E = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -119,6 +203,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 60C41114211946B70047F06E;
 			productRefGroup = 60C4111F211946B70047F06E /* Products */;
@@ -126,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				60C4111D211946B70047F06E /* PQProgressView */,
+				60C4113A211949020047F06E /* TestPQProgressView */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +221,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60C41139211949020047F06E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C41148211949030047F06E /* LaunchScreen.storyboard in Resources */,
+				60C41145211949030047F06E /* Assets.xcassets in Resources */,
+				60C41143211949020047F06E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +249,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60C41137211949020047F06E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C41140211949020047F06E /* ViewController.swift in Sources */,
+				60C4113E211949020047F06E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60C41150211949FD0047F06E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60C4111D211946B70047F06E /* PQProgressView */;
+			targetProxy = 60C4114F211949FD0047F06E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		60C41141211949020047F06E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C41142211949020047F06E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		60C41146211949030047F06E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C41147211949030047F06E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		60C41124211946B70047F06E /* Debug */ = {
@@ -326,6 +458,44 @@
 			};
 			name = Release;
 		};
+		60C4114B211949030047F06E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2BXA8AH8F;
+				INFOPLIST_FILE = TestPQProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.TestPQProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60C4114C211949030047F06E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2BXA8AH8F;
+				INFOPLIST_FILE = TestPQProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.TestPQProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -343,6 +513,15 @@
 			buildConfigurations = (
 				60C41127211946B70047F06E /* Debug */,
 				60C41128211946B70047F06E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60C4114A211949030047F06E /* Build configuration list for PBXNativeTarget "TestPQProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C4114B211949030047F06E /* Debug */,
+				60C4114C211949030047F06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
