@@ -1,0 +1,80 @@
+//
+//  PQProgressView.swift
+//  PQProgressView
+//
+//  Created by 盘国权 on 2018/8/2.
+//  Copyright © 2018年 pgq. All rights reserved.
+//
+
+import UIKit
+
+public class PQProgressView: UIView {
+    public enum PQProgressAnimation {
+        case flash
+        case circle(backgoundColor: UIColor, foregroundColor: UIColor)
+        case wave(waveColor: UIColor)
+    }
+    
+    public enum PQProgressText {
+        case white
+        case black
+        case custom(attributed:  [NSAttributedStringKey: Any])
+    }
+    
+    ///
+    public var animationType: PQProgressAnimation = .circle(backgoundColor: .gray, foregroundColor: .white)
+    /// 进度显示
+    public var textType: PQProgressText = .black
+    /// 0.0 ~ 1.0
+    public var progress: Float = 0.0 {
+        didSet{
+            animationLayer.update(progress: progress)
+            textLabel.text = String(format: "%.0f%%", progress * 100)
+        }
+    }
+    
+    internal(set) var animationLayer: PQProgressBaseLayer!
+    
+    public convenience init(frame: CGRect, animationType: PQProgressAnimation, textType: PQProgressText) {
+        self.init(frame: frame)
+        self.animationType = animationType
+        switch textType {
+        case .white:
+            textLabel.textColor = .white
+        case .black:
+            textLabel.textColor = .black
+        case .custom(let attr):
+            textLabel.attributedText = NSAttributedString(string: "0%", attributes: attr)
+        }
+        
+        switch animationType {
+        case .flash:
+            animationLayer = PQProgressFlashLayer()
+        case .circle(let backColor, let foreColor):
+            animationLayer = PQProgressCirclrLayer(backgroundColor: backColor, foregroundColor: foreColor)
+        case .wave(let waveColor):
+            animationLayer = PQProgressWaveLayer(color: waveColor)
+        }
+        
+        layer.insertSublayer(animationLayer, at: 0)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        if animationLayer.frame == .zero {
+            animationLayer.frame =  bounds
+            animationLayer.drawUI()
+        }
+        if textLabel.frame == .zero {        
+            textLabel.frame = bounds
+        }
+    }
+    
+    private lazy var textLabel: UILabel = {
+       let label = UILabel(frame: self.bounds)
+        self.addSubview(label)
+        label.textAlignment = .center
+        label.sizeToFit()
+        return label
+    }()
+}
