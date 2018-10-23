@@ -37,6 +37,8 @@ public class PQProgressView: UIView {
     /// error text, defualt equal nil
     public var errorText: String? = nil {
         didSet {
+            textLabel.numberOfLines = 0
+            textLabel.font = UIFont.systemFont(ofSize: 15)
             textLabel.text = errorText
         }
     }
