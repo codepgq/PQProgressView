@@ -33,6 +33,13 @@ public class PQProgressView: UIView {
             
         }
     }
+
+    /// error text, defualt equal nil
+    public var errorText: String? = nil {
+        didSet {
+            textLabel.text = errorText
+        }
+    }
     
     internal(set) var animationLayer: PQProgressBaseLayer!
     
